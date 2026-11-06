@@ -1,0 +1,5 @@
+interface:
+  display_name: "Multi-Agent Research Review"
+  short_description: "Staged scientific review with independent audits"
+policy:
+  allow_implicit_invocation: false

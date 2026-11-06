@@ -1,0 +1,4 @@
+# Direct dependencies. Full, tested dependency set: connectors.lock.txt.
+mcp==1.30.0
+httpx==0.28.1
+beautifulsoup4==4.14.3

@@ -1,0 +1,10 @@
+# Add only wanted blocks; do not replace your existing host configuration.
+# These services are external and are not owned or hosted by this repository.
+[mcp_servers.pubmed]
+url = "https://pubmed.caseyjhand.com/mcp"
+tool_timeout_sec = 60
+
+[mcp_servers.scite]
+url = "https://api.scite.ai/mcp"
+tool_timeout_sec = 60
+# Complete your own OAuth sign-in with: codex mcp login scite

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Paper Full Text Access"
+  short_description: "Recover papers at a paywall"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Literature Search & Evidence"
+  short_description: "Find papers and hand useful evidence to a fresh writer"
+  default_prompt: "Use $literature-search-review to find useful papers on my subject and provide evidence for the output I requested."
+policy:
+  allow_implicit_invocation: true

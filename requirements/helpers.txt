@@ -1,0 +1,2 @@
+# Optional PDF inspection; catalogue.py itself uses only the standard library.
+pypdf==7.0.0

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "literature-research-skills",
+  "version": "0.1.0",
+  "description": "Find literature, recover full text, and optionally run an explicitly requested multi-agent evidence review.",
+  "author": {"name": "Justin Jaraczewski"},
+  "repository": "https://github.com/jstin777/literature-research-skills",
+  "homepage": "https://github.com/jstin777/literature-research-skills",
+  "license": "MIT",
+  "keywords": ["literature", "research", "agent-skills", "mcp"],
+  "extensions": {"com.openai": {"interface": {
+    "displayName": "Literature Research Skills",
+    "shortDescription": "Search papers and verify evidence",
+    "longDescription": "Three portable skills for documented discovery, direct LibKey full-text recovery, and optional staged multi-agent review. Local connectors are separately enabled.",
+    "developerName": "Justin Jaraczewski",
+    "category": "Productivity"
+  }}}
+}
