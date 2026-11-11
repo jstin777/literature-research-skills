@@ -62,3 +62,22 @@ python3.12 -m venv .venv
 Offline tests use synthetic records and mocked network responses. `smoke.py --live` makes a few public-provider calls; it is not an end-to-end literature review. See [maintenance](docs/maintenance.md) for release, backup and uninstall instructions.
 
 MIT for original code and documentation. Dependencies and external services retain their own licenses and terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## Future Directions
+
+### 1. Dedicated Local PDF-to-Markdown Extraction Pipeline
+- **Deterministic Structural Parsing:** Replace raw `pypdf` text dumping with a local layout-aware parser (e.g., PyMuPDF layout analysis, Microsoft `markitdown`, or `marker`) to preserve document hierarchy (`#` title, `##` sections), multi-column reading flow, and reference lists.
+- **Tabular & Figure Extraction:** Automatically extract data tables into standard Markdown grid tables and convert caption blocks into structured Markdown quotes to prevent hallucinated numbers during extraction audits.
+- **Cost & Token Optimization:** Index clean Markdown artifacts locally instead of feeding multi-megabyte PDFs or unformatted text blocks to agent context windows.
+
+### 2. Multi-Model and Multi-Host Portability
+- **Beyond OpenAI Spec:** Decouple skill declarations from OpenAI-specific agent configurations (`openai.yaml`) by providing native definitions for Anthropic Claude (Model Context Protocol / MCP tool specs) and Google Gemini (Gemini CLI / Workspace agent manifests).
+- **Standardized Execution Boundary:** Ensure system prompt contracts, tool calls, and handoff protocols execute consistently regardless of the underlying foundation model.
+
+### 3. Local Retrieval & Hybrid Search Integration
+- **Hybrid Retrieval (BM25 + Dense Embeddings):** Enable fast local vector and keyword indexing over converted markdown files in `search-records/` and `working/` for large corpora.
+- **Chunk-Level Sourcing:** Allow the writer and audit agents to retrieve specific sub-sections or page locators without reading whole-paper bodies into active memory.
+
+### 4. Automated Reference Manager Synchronization
+- **Direct Zotero / Obsidian Bridge:** Automate the movement of included papers from the staging directory into Zotero collections via the Zotero Web API/local translation server, writing linked markdown literature notes directly into designated Obsidian vaults.
+- **Bi-directional Annotations:** Extract highlighted PDF annotations and reader notes back into the `working/evidence.jsonl` record schema.
