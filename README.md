@@ -81,3 +81,11 @@ MIT for original code and documentation. Dependencies and external services reta
 ### 4. Automated Reference Manager Synchronization
 - **Direct Zotero / Obsidian Bridge:** Automate the movement of included papers from the staging directory into Zotero collections via the Zotero Web API/local translation server, writing linked markdown literature notes directly into designated Obsidian vaults.
 - **Bi-directional Annotations:** Extract highlighted PDF annotations and reader notes back into the `working/evidence.jsonl` record schema.
+### 5. Reference Manager Expansion
+- **Expanded Compatibility:** Add compatibility with other reference/citation managaers such as Paperpile, Mendeley, and EndNote.
+  - **Zotero**: Free, open-source platform with robust community plugins and an excellent web clipper, but offers limited free cloud storage (300 MB) requiring paid upgrades for heavy PDF libraries.
+  - **Paperpile**: Strong integration across Google workspace (e.g. Google Docs, Google Drive, etc) and may be better suited for Gemini-based workflows, but requires paid subscription
+  - **Mendeley**: Built-in PDF annotation tools and literature recommendation features, but comes with corporate-owned data privacy concerns and a historically heavier desktop app.
+  - **EndNote**: Industry standard for massive multi-thousand-reference libraries with complex journal styles, but is expensive proprietary software with a steep learning curve and dated interface.
+### 6. README.md Visualization
+- Add visualizations of workflow to the readme.md
